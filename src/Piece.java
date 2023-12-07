@@ -18,4 +18,8 @@ public class Piece {
         System.out.print(symbol);
     }
 
+    public void setSymbol(char newSymbol) {
+        this.symbol = newSymbol;
+    }
+
 }

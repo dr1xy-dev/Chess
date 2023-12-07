@@ -98,4 +98,8 @@ public class Chess {
             System.out.println();
         }
     }
+
+    public void checkMove() {
+        System.out.println("");
+    }
 }
