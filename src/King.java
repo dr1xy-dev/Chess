@@ -22,7 +22,7 @@ public class King extends Piece {
 
         // split string of new info
         int mid = newPosition.length()/2;
-        String[] newPos = {newPosition.substring(0, midPoint), newPosition.substring(midPoint)};
+        String[] newPos = {newPosition.substring(0, mid), newPosition.substring(mid)};
 
         // legal moves
         // . ^ .

@@ -10,5 +10,8 @@ public class Main {
         } else {
             System.out.println("legal");
         }
+
+        Pawn pawn = new Pawn(true, "a2");
+        pawn.move("a6");
     }
 }
