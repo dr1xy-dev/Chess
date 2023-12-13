@@ -11,7 +11,7 @@ public class Main {
             System.out.println("legal");
         }
 
-        Pawn pawn = new Pawn(true, "a2");
-        pawn.move("a6");
+        Bishop bishop = new Bishop(false, "c1");
+        bishop.move("d2");
     }
 }
