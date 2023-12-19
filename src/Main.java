@@ -11,7 +11,7 @@ public class Main {
             System.out.println("legal");
         }
 
-        Bishop bishop = new Bishop(false, "c1");
-        bishop.move("d2");
+        Queen queen = new Queen(false);
+        queen.move("a2");
     }
 }

@@ -7,6 +7,9 @@ public class Knight extends Piece{
     }
 
     public void move(String newPosition) {
+        String topColumnBoundary = "h";
+        String lowColumnBoundary = "a";
+
         // split string for position information
         int midPoint = position.length()/2;
         // row column info is in [1] and column info in row [0]
@@ -14,7 +17,29 @@ public class Knight extends Piece{
 
         // split string of new info
         int mid = newPosition.length()/2;
-        String[] newPos = {position.substring(0, midPoint), position.substring(midPoint)};
+        String[] newPos = {newPosition.substring(0, midPoint), newPosition.substring(midPoint)};
+
+        int numDistance = Integer.parseInt(newPos[1]) - Integer.parseInt(currPos[1]);
+        int letterDistance = newPos[0].charAt(0) - currPos[0].charAt(0);
+
+        if (newPos[0].charAt(0) > topColumnBoundary.charAt(0) || newPos[0].charAt(0) < lowColumnBoundary.charAt(0) || Integer.parseInt(newPos[1]) > 8 || Integer.parseInt(newPos[1]) < 1) {
+            System.out.println("not legal as it is out of bounds");
+
+        } else if ((letterDistance == 1 || letterDistance == -1) && numDistance == 2) {
+            // up L shape
+            System.out.println("legal");
+
+        } else if ((letterDistance == 1 || letterDistance == -1) && numDistance == -2) {
+            // down L shape
+            System.out.println("legal");
+        } else if ((numDistance == 1 || numDistance == -1) && letterDistance == 2) {
+            // right L shape
+            System.out.println("legal");
+        } else if ((numDistance == 1 || numDistance == -1) && letterDistance == -2) {
+            System.out.println("legal");
+        } else {
+            System.out.println("not legal");
+        }
     }
 
 }
